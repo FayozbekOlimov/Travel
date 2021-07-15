@@ -1,0 +1,69 @@
+//--fonts--//
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: url("../fonts/NotoSerif-Regular.ttf");
+}
+@font-face {
+    font-family: 'PT Sans';
+    src: url("../fonts/PTSans-Regular.ttf");
+}
+
+
+
+//--Variables--//
+
+$primary: #2c2c2c;
+$first: #FF715B;
+$light: #fff;
+$line: rgba(245, 235, 233, 1);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif', serif;
+    // min-width: 320px;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+img {
+    user-select: none;
+}
+
+input {
+    outline: none;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 15px 30px !important;
+    text-transform: capitalize;
+    background: $first;
+    display: inline-block;
+    color: $light;
+    transition: all 0.3s linear;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
+    }
+}

@@ -1,0 +1,136 @@
+.footer {
+    margin-top: 100px;
+    
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .inner-wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 40%;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: $primary;
+        text-transform: capitalize;
+    }
+
+    &__contact {
+        max-width: 30%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: rgba(167, 153, 151, 1);
+        font-family: "PT Sans";
+        font-weight: 400;
+
+        .logo {
+            display: flex;
+
+            .title {
+                color: $primary;
+                font-weight: 600;
+                font-size: 28px;
+                margin-left: 10px;
+            }
+        }
+
+        .subtitle {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        &-lists {
+            list-style: none;
+
+            .link {
+                color:rgba(167, 153, 151, 1);
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                img {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        max-width: calc(50% - 10px);
+        width: 100%;
+        font-family: "PT Sans";
+        font-weight: 400;
+        
+        &-lists {
+            list-style: none;
+            
+            .link {
+                display: block;
+                margin-bottom: 10px;
+                text-transform: capitalize;
+                color: rgba(167, 153, 151, 1);
+                font-size: 14px;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    color: $first;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    &__support {
+        @extend .footer__links;
+
+        &-lists {
+            @extend .footer__links-lists;
+        }
+    }
+
+    &__newsletter{
+        max-width: 25%;
+        width: 100%;
+
+        textarea {
+            background: rgba(248, 248, 248, 1);
+            resize: none;
+            font-size: 20px;
+            padding: 5px;
+            outline: none;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .btn {
+            padding: 10px 15px  !important;
+        }
+    }
+    
+    .copyright {
+        text-align: center;
+        color: rgba(167, 153, 151, 1);
+        margin: 16px 0;
+        font-size: 16px;
+        font-family: "PT Sans";
+
+        span {
+            color: $first;
+            font-weight: 600;
+        }
+    }
+}

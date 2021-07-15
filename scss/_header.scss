@@ -1,0 +1,80 @@
+.header {
+    .container {
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        .logo {
+            width: 20px;
+            height: 20px;
+            object-fit: cover;
+        }
+
+        .title {
+            margin-left: 10px;
+            color: $primary;
+            font-size: 18px;
+            line-height: 25px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        
+        .link {
+            color: $primary;
+            font-size: 18px;
+            line-height: 25px;
+            position: relative;
+
+            &:not(:last-child) {
+                display: block;
+                margin-right: 20px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                background: $first;
+                left: 0;
+                bottom: 0;
+                transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+
+    &__account {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        p {
+            font-size: 18px;
+            line-height: 25px;
+
+            .icon {
+                cursor: pointer;
+            }
+
+            span {
+                display: inline-block;
+                width: 1px;
+                height: 100%;
+                background: $line;
+            }
+        }
+    }
+}

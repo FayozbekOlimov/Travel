@@ -1,0 +1,264 @@
+.testimonials {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    img {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .img {
+        position: absolute;
+        cursor: pointer;
+        
+        &-1 {
+            top: 50%;
+            left: 80%;
+            border: 3px solid yellow;
+            width: 50px;
+            height: 50px;
+            animation: img-1 5s linear alternate infinite;
+        }
+        &-2 {
+            top: 25%;
+            left: 90%;
+            border: 3px solid aqua;
+            width: 60px;
+            height: 60px;
+            animation: img-2 8s linear alternate infinite;
+        }
+        &-3 {
+            top: 80%;
+            left: 90%;
+            border: 3px solid green;
+            width: 50px;
+            height: 50px;
+            animation: img-3 10s linear alternate infinite;
+        }
+        &-4 {
+            top: 47%;
+            left: 15%;
+            border: 3px solid palevioletred;
+            width: 55px;
+            height: 55px;
+            animation: img-4 8s linear alternate infinite;
+        }
+        &-5 {
+            top: 75%;
+            left: 5%;
+            border: 3px solid blue;
+            width: 50px;
+            height: 50px;
+            animation: img-5 7s linear alternate infinite;
+        }
+        &-6 {
+            top: 40%;
+            left: 2%;
+            border: 3px solid goldenrod;
+            width: 40px;
+            height: 40px;
+            animation: img-6 5s linear alternate infinite;
+        }
+        &-7 {
+            top: 20%;
+            left: 10%;
+            border: 3px solid darkviolet;
+            width: 35px;
+            height: 35px;
+            animation: img-7 6s linear alternate infinite;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+        font-size: 36px;
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .shapeTop {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: rgba(156, 217, 236, 1);
+        box-shadow: 0 0 80px 80px rgba(156, 217, 236, 1);
+        position: absolute;
+        left: 5%;
+        top: 0;
+    }
+
+    &__card {
+        // max-width: 500px;
+        // width: 100%;
+        padding: 30px;
+        border-top: 5px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+
+        &-top {
+            display: flex;
+            margin-bottom: 30px;
+
+            .right {
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .name {
+                    text-transform: capitalize;
+                    line-height: 1.5;
+                    font-size: 24px;                 
+                }
+
+                .prof {
+                    font-family: "PT Sans";
+                    text-transform: capitalize;
+                    color: $first;
+                    font-weight: 700;
+                    line-height: 1.5;
+                    font-size: 18px;
+                }
+            }
+            .left {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-right: 10px;
+                img {
+                    width: 90px;
+                    height: 90px;
+                    border: 3px solid $first;
+                }
+            }
+        }
+
+        &-content {
+            margin-bottom: 40px;
+            .text {
+                text-align: center;
+                color:rgba(167, 153, 151, 1);
+            }
+        }
+    }
+
+    .splide {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .splide {
+        box-shadow: 0 10px 30px 5px rgba(219, 200, 197, 0.3) !important;
+    }
+
+    .splide__pagination__page {
+        background: rgba(196, 196, 196, 1) !important;
+        margin-left: 10px !important;
+        margin-bottom: 30px;
+        
+        &.is-active {
+            background: red !important;
+            transform: scale(1.5) !important;
+        }
+    }
+
+}
+
+// animation
+
+@keyframes img-1 {
+    to {
+        top: 60%;
+        left: 95%;
+    }
+}
+@keyframes img-2 {
+    40% {
+        top: 30%;
+        left: 80%;
+    }
+
+    80% {
+        top: 45%;
+        left: 95%;
+    }
+}
+@keyframes img-3 {  
+    60% {
+        top: 90%;
+        left: 72%;
+    }
+    80% {
+        top: 60%;
+        left: 80%;
+    }
+}
+@keyframes img-4 {  
+    20% {
+        top: 50%;
+        left: 20%;
+    }
+    40% {
+        top: 80%;
+        left: 25%;
+    }
+    75% {
+        top: 45%;
+        left: 5%;
+    }
+}
+@keyframes img-5 {
+    30% {
+        top: 60%;
+        left: 2%;
+    }
+    60% {
+        top: 80%;
+        left: 5%;
+    }
+    80% {
+        top: 80%;
+        left: 15%;
+    }
+    100% {
+        top: 75%;
+        left: 5%;
+    }
+}
+@keyframes img-6 {
+    40% {
+        top: 36%;
+        left: 8%;
+    }
+    60% {
+        top: 50%;
+        left: 7%;
+    }
+}
+@keyframes img-7 {
+    30% {
+        top: 16%;
+        left: 0%;
+    }
+    60% {
+        top: 20%;
+        left: 20%;
+    }
+    80% {
+        top: 40%;
+        left: 20%;
+    }
+}

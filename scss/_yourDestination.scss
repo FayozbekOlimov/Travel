@@ -1,0 +1,146 @@
+.yourDestination {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+        position: relative;
+    }
+
+    .shapeTop {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: rgb(205, 243, 205);
+        box-shadow: 0 0 80px 80px rgb(205, 243, 205);
+        position: absolute;
+        left: 95%;
+        top: 0;
+    }
+    
+    &__title {
+        text-transform: capitalize;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-top: 15%;
+    }
+
+    .btn {
+        position: absolute;
+        transform: translateY(-100%);
+        top: 100%;
+    }
+
+    &__card {
+        max-width: calc(33.33% - 20px);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid $first;
+            border-top: none;
+            padding: 10px;
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .title {
+                    text-transform: capitalize;
+                    line-height: 1.5;
+                    // font-size: 18px;
+                }
+                &-bottom {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+
+                    .price, .stars, .views {
+                        margin-right: 20px;
+                        font-size: 14px;
+                        font-family: "PT Sans";
+                    }
+                    .price {
+                        color: $first;
+                        font-weight: 600;
+                    }
+                    .views {
+                        color: #A79997;
+                        font-weight: 500;
+                    }
+                    .stars {
+                        cursor: pointer;
+                        color: rgba(255, 192, 30, 1);
+                    }
+                }
+            }
+
+            .right {
+                width: 50px;
+                height: 50px;
+                background: $first;
+                display: flex;
+                justify-content: center;
+                font-weight: bold;
+                align-items: center;
+                font-size: 30px;
+                color: $light;
+                cursor: pointer;
+                user-select: none;
+            }
+        }
+
+        &:nth-child(1) {
+            position: relative;
+
+            .triangle {
+                position: absolute;
+                width: 40%;
+                height: 25%;
+                clip-path: polygon(100% 100%, 100% 0, 0 100%);
+                background: #EDF3FF;
+                right: 0;
+                top: -30%;
+            }
+        }
+        &:nth-child(2) {
+            transform: translateY(-30%);
+        }
+        &:nth-child(3) {
+            position: relative;
+
+            .circle {
+                position: absolute;
+                width: 35%;
+                height: 25%;
+                background: #FFF4DE;
+                clip-path: circle(100% at 0 100%);
+                left: 0;
+                top: -30%;
+            }
+        }
+    }
+}

@@ -1,0 +1,163 @@
+.hero {
+
+    .container {
+        flex-direction: column;
+    }
+    
+    &__banner {
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        color: $primary;
+        font-size: 65px;
+        line-height: 90px;
+        max-width: 600px;
+        width: 100%;
+        text-transform: capitalize;
+    }
+
+    &__btn {
+        position: absolute;
+        left: 10%;
+        top: 58%;
+    }
+
+    &__pagination {
+        display: flex;
+        margin: 20px auto 0;
+        align-items: center;
+        max-width: 250px;
+        width: 100%;
+        justify-content: space-between;
+
+        .item {
+            width: 40px;
+            height: 40px;
+            border: 1px solid $line;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            user-select: none;
+            color: $first;
+            cursor: pointer;
+
+            &.active {
+                background: $first;
+                color: $light;
+            }
+        }
+        .line {
+            width: 100px;
+            height: 2px;
+            background: $line;
+        }
+        .number {
+            color: $first;
+        }
+    }
+
+    &__search-box {
+        margin: 20px 0px;
+        
+        .form {
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            background: $light;
+            justify-content: space-between;
+            box-shadow: 0 10px 30px 5px rgba(219, 200, 197, 0.3);
+            
+            &-item {
+                width: 100%;
+                max-width: calc(25% - 20px);
+            
+                .desc {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    text-transform: capitalize;
+                    color: rgba(167, 153, 151, 1);
+                    font-family: 'PT Sans', sans-serif;
+                }
+    
+                &-country, &-date, &-price {
+                    height: 30px;
+                    width: 100%;
+                    color: $first;
+                    border: none;
+                    font-size: 18px !important;
+                    border-bottom: 1px solid $line;
+                    font-weight: normal;
+                    background: #fff;
+                }
+                
+                &-date {
+                    position: relative;
+                    font-size: 20px !important;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 30px;
+                        height: 26px;
+                        background: #fff;
+                    }
+
+                    &::before {
+                        content: "\f274";
+                        position: absolute;
+                        right: 3px;
+                        top: 0;
+                        color: $first;
+                        font-size: 24px;
+                        z-index: 1;
+                    }
+                }
+                
+                &:nth-child(3) {
+                    position: relative;
+
+                    span {
+                        width: 30px;
+                        height: 30px;
+                        background: #fff;
+                        position: absolute;
+                        top: 32px;
+                        color: $first;
+                        font-size: 20px;
+                        right: -7px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+                &-country {
+                    outline: none;
+                    text-transform: capitalize;
+                }
+    
+                &-price::placeholder {
+                    color: $first;
+                }
+
+                &:last-child {
+                    padding: 0 !important;
+                    height: 40px;
+                    transform: translateY(50%);
+                }
+            }
+        }
+    }
+}
