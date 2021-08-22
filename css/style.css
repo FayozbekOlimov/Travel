@@ -294,11 +294,20 @@ button {
   border-bottom: 1px solid #f5ebe9;
   font-weight: normal;
   background: #fff;
+  cursor: pointer;
 }
 
 .hero__search-box .form-item-date {
   position: relative;
   font-size: 20px !important;
+}
+
+.hero__search-box .form-item-date::-webkit-datetime-edit {
+  color: transparent;
+}
+
+.hero__search-box .form-item-date:focus::-webkit-datetime-edit {
+  color: #FF715B;
 }
 
 .hero__search-box .form-item-date::after {
@@ -309,6 +318,7 @@ button {
   width: 30px;
   height: 26px;
   background: #fff;
+  pointer-events: none;
 }
 
 .hero__search-box .form-item-date::before {
@@ -319,6 +329,7 @@ button {
   color: #FF715B;
   font-size: 24px;
   z-index: 1;
+  pointer-events: none;
 }
 
 .hero__search-box .form-item:nth-child(3) {

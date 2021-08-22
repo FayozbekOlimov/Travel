@@ -98,11 +98,15 @@
                     border-bottom: 1px solid $line;
                     font-weight: normal;
                     background: #fff;
+                    cursor: pointer;
                 }
                 
                 &-date {
                     position: relative;
                     font-size: 20px !important;
+
+                    &::-webkit-datetime-edit { color: transparent; }
+                    &:focus::-webkit-datetime-edit { color: $first; }
 
                     &::after {
                         content: "";
@@ -112,6 +116,7 @@
                         width: 30px;
                         height: 26px;
                         background: #fff;
+                        pointer-events: none;
                     }
 
                     &::before {
@@ -122,6 +127,7 @@
                         color: $first;
                         font-size: 24px;
                         z-index: 1;
+                        pointer-events: none;
                     }
                 }
                 
